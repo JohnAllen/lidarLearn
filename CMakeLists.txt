@@ -1,5 +1,7 @@
 cmake_minimum_required (VERSION 2.6)
-project (lidarTest)
+project (lidar)
 include_directories(include)
 add_executable(lidarTest src/lidarTest.c src/lidarLite.c include/lidarLite.h)
+add_executable(lidar src/lidar.c src/lidarLite.c include/lidarLite.h)
 target_link_libraries (lidarTest wiringPi wiringPiDev pthread)
+target_link_libraries (lidar wiringPi wiringPiDev pthread)
