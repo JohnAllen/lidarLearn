@@ -24,6 +24,11 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.*/
 
+#ifdef __cplusplus
+
+extern "C" {
+#endif
+
 #include <stdio.h>
 #include <wiringPiI2C.h>
 #include <stdbool.h>
@@ -56,3 +61,8 @@ unsigned char  _read_byteNZ(int, int);
 unsigned char  _read_byte_raw(int, int, bool);
 unsigned char lidar_version(int) ;
 unsigned char lidar_status(int);
+
+#ifdef __cplusplus
+}
+#endif
+
